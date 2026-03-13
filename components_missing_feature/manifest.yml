@@ -1,0 +1,20 @@
+modules:
+  jira:projectSettingsPage:
+    - key: components-missing-feature-hello-world-project-settings-page
+      resource: main
+      resolver:
+        function: resolver
+      render: native
+      title: components_missing_feature
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: src/frontend/index.jsx
+app:
+  runtime:
+    name: nodejs24.x
+    memoryMB: 256
+    architecture: arm64
+  id: ari:cloud:ecosystem::app/ee95d0b1-00e5-44eb-a4c9-a50ea1d9fe00
